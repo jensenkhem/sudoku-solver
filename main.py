@@ -147,20 +147,10 @@ def is_consistent(grid: Grid, var, domain_val):
     # Return True if we pass all contraints
     return True
 
-# Tutorial problem
-file = open('tutorial_problem.txt', 'r')
-problems = file.readlines()
-for p in problems:
-    g = Grid()
-    g.read_file(p)
-    result, success = backtracking(g, select_variable_mrv)
-    if (result and success):
-        result.print()
-
 running_time_mrv = []
 running_time_first_available = []
 
-file = open('top95.txt', 'r')
+file = open('problems.txt', 'r')
 problems = file.readlines()
 
 # Full test for MRV
